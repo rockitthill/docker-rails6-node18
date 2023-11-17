@@ -1,6 +1,11 @@
 # Dockerfile for rockitthill/rails6
 
-Rails 6 + Ruby 2.7.8 w/ curl, git, nano, node 14, yarn 1.22.4, libmariadb, imagemagick, python2. Compatible with `linux/arm64` (M1, M2) and `linux/amd64` (Intel).
+`rockitthill/ruby27multi` image with additions suitable for Rails 6: tzdata, libmariadb-dev, imagemagick, libjemalloc2, apt-transport-https, and apt-utils.
+
+Comes with a simplistic `MALLOC_CONF` (see source), configures bundler, sets
+up binding to `0.0.0.0`, and exposes port `3000`.
+
+Compatible with `linux/arm64` (M1, M2) and `linux/amd64` (Intel).
 
 ## Building, Tagging, and Pushing
 

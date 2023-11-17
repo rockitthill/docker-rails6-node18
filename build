@@ -29,6 +29,7 @@ docker buildx create --use --name $BUILDER --platform $PLATFORMS
 echo ""
 echo "$BULLET Building multi-platform images..."
 docker buildx build --push . --platform $PLATFORMS --tag $TAG
+#--progress plain --no-cache
 echo ""
 echo "$BULLET Done! Removing builder..."
 docker buildx rm $BUILDER
