@@ -1,4 +1,4 @@
-FROM rockitthill/ruby27multi
+FROM rockitthill/ruby27multi-node18
 
 # Set up directory structure
 RUN mkdir /app
